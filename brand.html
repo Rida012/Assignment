@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title> Eyeonic </title>
+  <style>
+    body {
+  font-family: "Poppins", sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.layout_padding {
+  padding: 90px 0;
+}
+
+.layout_padding2 {
+  padding: 45px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 45px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 45px;
+}
+
+.layout_padding-top {
+  padding-top: 90px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 90px;
+}
+
+.long_section {
+  margin-left: 45px;
+  margin-right: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.heading_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: "Playfair Display", serif;
+}
+
+.heading_container h2 {
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.heading_container.heading_center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+/*header section*/
+.header_section {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.header_section .container-fluid {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.header_section .nav_container {
+  margin: 0 auto;
+}
+
+.header_section.innerpage_header {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, from(#3c2946), to(#3c2946));
+  background: linear-gradient(to right, #3c2946, #3c2946);
+  padding: 10px 0;
+}
+
+.custom_nav-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.custom_menu-btn {
+  position: fixed;
+  right: 25px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+.custom_menu-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3c2946;
+  border: 2px solid #ffffff;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.07);
+  z-index: 7;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.custom_menu-btn.menu_btn-style::before {
+  width: 100vh;
+  height: 100vh;
+  background-color: #3c2946;
+  border: none;
+  -webkit-transform: scale(5);
+          transform: scale(5);
+  border-radius: 0;
+}
+
+.custom_menu-btn button {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  position: relative;
+  z-index: 999;
+  margin: 0;
+}
+
+.custom_menu-btn button span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 2.5px 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 15px;
+}
+
+.custom_menu-btn .s-2 {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.menu_btn-style button span {
+  background-color: #ffffff;
+}
+
+.menu_btn-style button .s-1 {
+  -webkit-transform: rotate(45deg) translate(6px, 6px);
+          transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu_btn-style button .s-2 {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+.menu_btn-style button .s-3 {
+  -webkit-transform: rotate(-45deg) translate(5px, -5px);
+          transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 9;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  font-size: 60px;
+}
+
+.overlay a {
+  padding: 0px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffffff;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0;
+}
+
+.overlay a:hover {
+  color: #ffd571;
+}
+
+.overlay-content {
+  position: relative;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  z-index: 99;
+}
+
+.menu_width {
+  width: 100%;
+}
+
+.menu_width.overlay a {
+  opacity: 1;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: initial;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-brand {
+  margin-top: 10px;
+}
+
+.navbar-brand span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/*end header section*/
+/* slider section */
+.slider_section {
+  min-height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  background-color: #3c2946;
+}
+* {
+	box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+	background-image: linear-gradient(to right, rgb(231,137,137),rgba(80,2,80,0.692));
+}
+
+.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 50px;
+	color: #fff;
+	margin: 30px 0 30px 0;
+}
+
+h4 {
+    margin: 11px 0 7px 0;
+    color: #fff;
+    font-size: 20px;
+	text-align: center;
+}
+
+img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.row {
+	margin: 10px -16px;
+}
+
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+
+.column {
+	float: left;
+	width: 33.33%;
+	display: none;
+}
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.content {
+    padding: 10px;
+	cursor: pointer;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #ee04a0 , #cd00ab28);
+}
+
+
+.show {
+	display: block;
+}
+
+
+.btn {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: #fff;
+	cursor: pointer;
+	border-radius: 20px;
+	font-size: 15px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn:hover {
+	color: #fff;
+	background-image: linear-gradient(to right, #02AAB0 , #00CDAC);
+}
+
+.btn.active {
+    color: #fff;
+    border-radius: 20px;
+	background-image: linear-gradient(to right, #02AAB0 , #00CDAC);
+}
+
+/* Responsive media query */
+@media (max-width: 769px) {
+	.column {
+		width: 100%;
+	}
+	.btn {
+		padding: 11px 14px;
+	}
+}
+
+
+  </style>
+
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+  
+  <!-- header section strats -->
+  <header class="innerpage_header header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>
+           EYEONIC
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="lenses.html">Lenses</a>
+                <a href="frames.html">Frame's</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="Compare.html">Similar Brand's</a>
+                <a href="brand.html">Product Filter</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="main">
+
+	<h1 class="text-center" >Product Filter</h1> 
+	<br>
+	<br>
+
+	
+	<div id="BtnContainer">
+		<button class="btn active" onclick="filterSelection('all')"> SHOW ALL</button>
+		<button class="btn" onclick="filterSelection('Prada')"> PRADA</button>
+		<button class="btn" onclick="filterSelection('Boss')"> BOSS</button>
+		<button class="btn" onclick="filterSelection('YSL')"> YSL</button>
+	</div>
+	
+	<div class="row">
+	
+		
+		<div class="column Boss">
+			<div class="content">
+				<img src="images/1.jpg" alt="Boss" />
+				<h4>$110</h4>
+			</div>
+		</div>
+		<div class="column Boss">
+			<div class="content">
+				<img src="images/3.jpg" alt="Boss" />
+				<h4>$90</h4>
+			</div>
+		</div>
+		<div class="column Boss">
+			<div class="content">
+				<img src="images/2.jpg" alt="Boss" />
+				<h4>$70</h4>
+			</div>
+		</div>
+		
+		<div class="column Prada">
+			<div class="content">
+				<img src="images/4.jpg" alt="Prada" />
+				<h4>$100</h4>
+			</div>
+		</div>
+		<div class="column Prada">
+			<div class="content">
+				<img src="images/5.jpg" alt="Prada" />
+				<h4>$75</h4>
+			</div>
+		</div>
+		<div class="column Prada">
+			<div class="content">
+				<img src="images/6.jpg" alt="Prada" />
+				<h4>$120</h4>
+			</div>
+		</div>
+		
+		<div class="column YSL">
+			<div class="content">
+				<img src="images/7.jpg" alt="YSL" />
+				<h4>$60</h4>
+			</div>
+		</div>
+		<div class="column YSL">
+			<div class="content">
+				<img src="images/8.jpg" alt="YSL" />
+				<h4>$90</h4>
+			</div>
+		</div>
+		<div class="column YSL">
+			<div class="content">
+				<img src="images/9.jpg" alt="YSL" />
+				<h4>$120</h4>
+			</div>
+		</div>
+		
+	
+	</div>
+</div>
+
+
+
+  <script>
+    filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("BtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+  </script>
+  <script src="../Eyeonic project/js/custom.js"></script>
+  <script src="../Eyeonic project/js/bootstrap.js"></script>
+  
+</body>
+</html>
